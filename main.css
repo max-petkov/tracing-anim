@@ -34,3 +34,16 @@ svg {
     stroke-dasharray: 0 31;
     stroke-dashoffset: -16;
 }
+
+.icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.icon-container img{
+    width: 100%;
+    height: auto;
+}
