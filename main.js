@@ -11,6 +11,8 @@ function animateCircles() {
       delay: 0.4,
       repeat: -1
   });
+  const shopify = icons[0].firstElementChild;
+  console.log(shopify);
 
   setPosition(icons, svg);
   gsap.set(icons, {autoAlpha: 1});
@@ -27,7 +29,7 @@ function animateCircles() {
     },
     autoAlpha: 0.45,
     duration: 0.25,
-    ease: Power3.easeOut
+    ease: Power3.easeOut,
   })
   .to(startLine, {
     autoAlpha: 0,
