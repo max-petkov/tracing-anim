@@ -11,8 +11,8 @@ function animateCircles() {
       delay: 0.4,
       repeat: -1
   });
-  const shopify = icons[0].firstElementChild;
-  console.log(shopify);
+  const wonderment = icons[1].firstElementChild;
+  const aftership = icons[2].firstElementChild;
 
   setPosition(icons, svg);
   gsap.set(icons, {autoAlpha: 1});
@@ -99,7 +99,19 @@ function animateCircles() {
         },
         autoAlpha: 0.55,
         duration: 0.25,
-        ease: Power3.easeOut
+        ease: Power3.easeOut,
+        onStart: function() {
+          gsap.to([wonderment, aftership], {
+            repeat:1,
+            yoyo: true,
+            duration: 0.4,
+            ease: Power2.easeOut,
+            y: function(i) {
+              if(!i) return 0.9;
+              else return -0.9;
+            },
+          });
+        },
       }, "<24%")
       .to(endLines, {
         autoAlpha: 0,
